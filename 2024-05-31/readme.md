@@ -1,8 +1,8 @@
 # 2024-05-31
 
-# Condicionales
+## Condicionales
 
-## Que es una condicion?
+### Que es una condicion?
 
 Una condición, en el contexto de la programación, es una expresión que evalúa si cierta afirmación es verdadera o falsa. En términos más técnicos, es una expresión booleana que determina si se cumple cierta situación o criterio en un programa.
 
@@ -10,7 +10,7 @@ Las condiciones son fundamentales en la lógica de control de flujo de un progra
 
 En muchos lenguajes de programación, incluido JavaScript, las condiciones suelen involucrar operadores de comparación (como mayor que `(>)`, menor que `(<)`, igual a `(===)`, etc.), operadores lógicos (como AND `(&&)`, OR `(||)`, NOT `(!)`), y variables o valores cuyo estado se está evaluando.
 
-## Evaluacion de bloques de control
+### Evaluacion de bloques de control
 
   ```javascript
   if (condición) {
@@ -48,7 +48,7 @@ En muchos lenguajes de programación, incluido JavaScript, las condiciones suele
   }
   ```
 
-## Ejemplos
+### Ejemplos
 
 <details>
 <summary>1.  Básico de if</summary>
