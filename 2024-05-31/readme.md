@@ -10,7 +10,7 @@ Las condiciones son fundamentales en la lógica de control de flujo de un progra
 
 En muchos lenguajes de programación, incluido JavaScript, las condiciones suelen involucrar operadores de comparación (como mayor que `(>)`, menor que `(<)`, igual a `(===)`, etc.), operadores lógicos (como AND `(&&)`, OR `(||)`, NOT `(!)`), y variables o valores cuyo estado se está evaluando.
 
-### Evaluacion de bloques de control
+### Evaluando de bloques de control
 
   ```javascript
   if (condición) {
@@ -48,7 +48,7 @@ En muchos lenguajes de programación, incluido JavaScript, las condiciones suele
   }
   ```
 
-### Ejemplos
+#### Ejemplos
 
 <details>
 <summary>1.  Básico de if</summary>
@@ -184,3 +184,38 @@ if (esAdulto) {
 ```
 
 </details>
+
+### Operador Ternario
+
+El operador ternario en JavaScript es una forma concisa de escribir una declaración condicional if-else. Se llama "ternario" porque opera con tres operandos: una condición, una expresión a ejecutar si la condición es verdadera y una expresión a ejecutar si la condición es falsa.
+
+La sintaxis del operador ternario es la siguiente:
+
+```javascript
+condición ? expresiónSiVerdadera : expresiónSiFalsa;
+```
+
+Asignación de valores basados en una condición:
+
+```javascript
+let edad = 20;
+let mensaje = edad >= 18 ? "Eres mayor de edad." : "Eres menor de edad.";
+console.log(mensaje); // Imprime "Eres mayor de edad."
+```
+
+#### Consideraciones de uso
+
+- Legibilidad: Aunque el operador ternario puede hacer que el código sea más conciso, puede afectar la legibilidad si se usa en exceso o de manera anidada. En estos casos, es mejor usar declaraciones if-else tradicionales.
+
+- Simpleza: Úsalo para condiciones simples. Si la lógica es compleja, es preferible usar if-else para mantener la claridad del código.
+
+Ejemplo anidado:
+
+```javascript
+let puntuacion = 85;
+let calificacion = puntuacion >= 90 ? "A" :
+                   puntuacion >= 80 ? "B" :
+                   puntuacion >= 70 ? "C" :
+                   puntuacion >= 60 ? "D" : "F";
+console.log(calificacion); // Imprime "B"
+```
