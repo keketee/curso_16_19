@@ -1,0 +1,12 @@
+{
+  "name": "2024-06-07",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:phase-one": "npx light-server --open  --serve . --port 4000",
+    "dev:phase-two": "npx light-server --open '/_index.html' --serve . --port 4000"
+  },
+  "author": "",
+  "license": "ISC"
+}

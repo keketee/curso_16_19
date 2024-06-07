@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="_styles.css">
+  <style>
+    .bg-turquoise {
+      background-color: turquoise;
+    }
+
+    .border-red {
+      border: 3px solid red;
+    }
+  </style>
+  <script src="_scripts.js"></script>
+  <script>
+    function quitarDiv() {
+      const container = document.querySelector('.container')
+      const quedanElementosEnElContainer = container.children.length > 0
+
+      console.log("quitarDiv")
+      console.log("elementos del div container!", container.children)
+
+      if (quedanElementosEnElContainer) {
+        const elementoHijo = container.children[0]
+        console.log("removido ", elementoHijo)
+        elementoHijo.remove()
+      } else {
+        console.log("ya no quedan elementos que quitar!");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <button id="botonQuitar" onclick="quitarDiv()">Quitar primer div</button>
+  <button id="botonColor">Cambiar color a texto de primer div</button>
+  <div class="container">
+    <div class="border-red">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aperiam sed adipisci velit
+        harum architecto
+        cupiditate possimus laudantium voluptate qui veniam recusandae sequi, provident rerum? Praesentium quas veniam
+        amet
+        illo!
+      </p>
+    </div>
+    <div class="bg-yellow">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum minima quas qui vero magnam a dolorem atque alias
+        maxime eos, debitis distinctio? Reiciendis veritatis incidunt aliquam voluptate nostrum totam porro!
+      </p>
+    </div>
+    <div class="bg-turquoise">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quisquam aut voluptas repellendus, nesciunt,
+        delectus illum placeat accusamus magnam est cumque, autem expedita quidem tenetur deserunt obcaecati neque
+        reiciendis sint.
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>
