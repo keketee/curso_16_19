@@ -2,9 +2,9 @@
   "name": "2024-06-07",
   "version": "1.0.0",
   "scripts": {
-    "dev:101": "npx light-server --open  --serve ./101 --port 4000",
-    "dev:102": "npx light-server --open  --serve ./102 --port 4000",
-    "dev:form": "npx light-server --open  --serve ./form --port 4000"
+    "dev:101": "npx -y light-server --open  --serve ./101 --port 4000",
+    "dev:102": "npx -y light-server --open  --serve ./102 --port 4000",
+    "dev:form": "npx -y light-server --open  --serve ./form --port 4000"
   },
   "author": "",
   "license": "ISC",
