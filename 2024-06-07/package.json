@@ -1,12 +1,13 @@
 {
-  "name": "2024-06-07",
+  "name": "form",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:phase-one": "npx light-server --open  --serve . --port 4000",
-    "dev:phase-two": "npx light-server --open '/_index.html' --serve . --port 4000"
+    "dev:101": "npx light-server --open  --serve /101 --port 4000",
+    "dev:102": "npx light-server --open  --serve /102 --port 4000",
+    "dev:form": "npx light-server --open  --serve /form --port 4000"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
