@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INDEX</title>
+  <style>
+    .user-registered {
+      display: none;
+    }
+  </style>
+  <script>
+    window.addEventListener('load', function () {
+      // extraer usuario de la variable GET 'user' de la url
+      const usuario = new URLSearchParams(window.location.search).get('user')
+      // si 'user' existe entonces saludamos
+      if (usuario) {
+        const divUsuarioRegistrado = document.querySelector('.user-registered')
+        const anchorUsuarioRegistrado = divUsuarioRegistrado.children[0]
+        anchorUsuarioRegistrado.href += '?user=' + usuario
+        divUsuarioRegistrado.style.display = 'block'
+      }
+    })
+  </script>
+</head>
+
+<body>
+  <h1>INDEX PAGE</h1>
+  <form action="/user/index.html" method="get">
+    <input type="text" placeholder="escriba su usuario registrado" name="user" id="">
+    <input type="submit" value="Login">
+  </form>
+
+  <a class="user-register" href="/register/index.html">No tiene cuenta? Registro aqui!</a>
+
+  <div class="user-registered">
+    Parece que ha registrado un usuario, desea ir a su pagina?
+    <a href="/user/index.html">Ir a user page</a>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REGISTER PAGE</title>
+  <script>
+    window.addEventListener('load', function () {
+      // extraer usuario de la variable GET 'user' de la url
+      const usuario = new URLSearchParams(window.location.search).get('user')
+      // si 'user' existe entonces saludamos
+      if (usuario) {
+        const divUsuarioRegistrado = document.querySelector('.user-registered')
+        const anchorUsuarioRegistrado = divUsuarioRegistrado.children[0]
+        anchorUsuarioRegistrado.href += '?user=' + usuario
+        divUsuarioRegistrado.style.display = 'block'
+      }
+    })
+
+    function handleSubmit(evt) {
+      const noHayUsuarioEnElInput = evt.target.children[0].value === ''
+      if (noHayUsuarioEnElInput) {
+        evt.preventDefault();
+        window.location.href = '../404/index.html'
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>REGISTER PAGE</h1>
+  <form onsubmit="handleSubmit(event)" action=" ../index.html" method="get">
+    <input type="text" placeholder="escriba usuario a crear" name="user" id="">
+    <input type="submit" value="Registrar">
+  </form>
+</body>
+
+</html>

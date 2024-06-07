@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USER PAGE</title>
+  <style>
+    .user-logout {
+      display: none;
+    }
+  </style>
+  <script>
+    window.addEventListener('load', function () {
+      const parrafoSaludo = document.querySelector('.user-hello')
+      // extraer usuario de la variable GET 'user' de la url
+      const usuario = new URLSearchParams(window.location.search).get('user')
+
+      if (usuario) {
+        // si 'user' existe entonces saludamos
+        parrafoSaludo.textContent += usuario
+        const homeLink = document.querySelector('.home-link')
+        // actualizamos la URL de la pagina de inicio con su 'user'
+        homeLink.href += '?user=' + usuario
+        // mostramos anchor de 'logout'
+        const userLogout = document.querySelector('.user-logout')
+        userLogout.style.display = 'block'
+      } else {
+        parrafoSaludo.textContent = "Vaya, no deberias estar aqui desconocido!"
+      }
+    })
+  </script>
+</head>
+
+<body>
+  <h1>USER PAGE</h1>
+  <p class="user-hello">Hola </p>
+  <a class="home-link" href="../index.html">Volver al inicio</a>
+  <a class="user-logout" href="../index.html">Logout</a>
+</body>
+
+</html>
