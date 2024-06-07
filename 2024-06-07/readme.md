@@ -2,14 +2,20 @@
 
 ## Creando un programa con HTML, CSS y JavaScript
 
-### 101
+### 101 (HTML plain!)
 
-HTML plain!
+```bash
+npm run dev:101
+```
 
-### 102
+### 102 (HTML con importaciones de archivos y listeners)
 
-HTML con importaciones de archivos y listeners
+```bash
+npm run dev:102
+```
 
-### Form
+### form (HTML con formularios)
 
-HTML plain!
+```bash
+npm run dev:form
+```
