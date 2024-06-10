@@ -4,17 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script>
-      console.log(document);
-    </script>
   </head>
 
   <body>
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi mollitia rem blanditiis, velit cupiditate
     doloribus eum voluptatem a tenetur commodi perspiciatis iste recusandae itaque ullam cum nostrum, quisquam,
     exercitationem quidem.
-
     <div id="container"></div>
     <div id="result"></div>
+    <script>
+      //sustituir espacios '' por asterioscos '*'
+
+      const frase =
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi mollitia rem blanditiis, velit cupiditate  doloribus eum voluptatem a tenetur commodi perspiciatis iste recusandae itaque ullam cum nostrum, quisquam,exercitationem quidem.';
+
+      let nuevaFrase = '';
+
+      for (let index = 0; index < frase.length; index++) {
+        const caracter = frase[index];
+
+        if (caracter === ' ') {
+          nuevaFrase += '*';
+        } else {
+          nuevaFrase += caracter;
+        }
+        console.log(caracter);
+        console.log(nuevaFrase);
+      }
+
+      //sumar los numero del 1 al 10
+
+      let contador;
+      for (let index = 0; index < 10; index++) {
+        //
+      }
+      console.log(contador);
+    </script>
   </body>
 </html>
