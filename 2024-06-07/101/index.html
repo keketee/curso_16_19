@@ -34,9 +34,14 @@
 
       //sumar los numero del 1 al 10
 
-      let contador;
-      for (let index = 0; index < 10; index++) {
-        //
+      let contador = 0;
+      for (let index = 0; index <= 10; index++) {
+        console.log('antes', contador);
+        const resultado = contador + index;
+        console.log('resultado', resultado);
+        contador = resultado;
+        console.log(index);
+        console.log('despues', contador);
       }
       console.log(contador);
     </script>
